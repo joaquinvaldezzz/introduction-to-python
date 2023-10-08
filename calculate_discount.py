@@ -1,4 +1,5 @@
 # Create a function that will calculate the discounted price of an item
+# `int | float` indicates that the parameter should be either an integer or a float
 def price_discount(original_price: int | float, discount_percentage: int | float):
     result = original_price - (original_price * discount_percentage // 100)
 
@@ -7,6 +8,7 @@ def price_discount(original_price: int | float, discount_percentage: int | float
 
 # Create a function that will ask the user to input the original price and the discount percentage
 def input_data():
+    # `int | float` indicates that the variable only accepts an integer or a float
     original: int | float = eval(input('Enter original price: '))
     discount: int | float = eval(input('Enter percentage of the discount: '))
 
