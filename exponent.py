@@ -1,18 +1,9 @@
 def input_list():
     # Accepts a list of integers (only) from the user
-    elements = list(map(int, input('Enter elements separated by comma: ').split(',')))
-
-    if not elements:
-        print('Empty list.')
-        exit()
-    else:
-        return elements
+    return list(map(int, input('Enter elements separated by comma: ').split(',')))
 
 
 def calculate_list(action: int, user_list: list[int]):
-    if not user_list:
-        return 'Empty list'
-
     # If the action is 1, return the list with each element raised to the power of 2
     if action == 1:
         return [i ** 2 for i in user_list]
@@ -28,7 +19,7 @@ def calculate_list(action: int, user_list: list[int]):
 print('Enter your choice of action:')
 
 for index in [1, 2]:
-    print(f'- Action #{index}: Raise each element by {index}')
+    print(f'- Action #{index}: Raise each element by {index + 1}')
 
 # Asks the user to enter their choice of action
 user_action = int(input('\nEnter your choice: '))
