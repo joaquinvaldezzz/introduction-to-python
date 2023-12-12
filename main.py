@@ -1,4 +1,9 @@
-# TODO: Debug the code and fix the errors
+"""
+Author:         John Joaquin A. Valdez
+Date created:   December 6, 2023,
+Description:    A simple program that adds users to a set and reads its contents.
+"""
+
 
 def add_user(user_details, user_id, username, user_password):
     system_user = frozenset(
@@ -10,9 +15,10 @@ def add_user(user_details, user_id, username, user_password):
 
 def view_users(user_details):
     if user_details:
-        print(user_details)
-    # for user_id, username, password in user_details:
-    #     print(f'User ID: {user_id}, System User: {user_details}')
+        for user_id in user_details:
+            print(f'\nUser ID: {user_id}, System User: {user_details}')
+
+        print()
     else:
         print('\nNo contacts or users available here.\n')
 
