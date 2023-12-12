@@ -6,8 +6,7 @@ Description:    A simple program that adds users to a set and reads its contents
 
 
 def add_user(user_details, user_id, username, user_password):
-    system_user = frozenset(
-        {'user_id': user_id, 'user_password': user_password, 'username': username})
+    system_user = {'user_id': user_id, 'user_password': user_password, 'username': username}
     user_details[user_id] = system_user
 
     print(f'\nUser {user_id} added successfully.\n')
@@ -15,8 +14,13 @@ def add_user(user_details, user_id, username, user_password):
 
 def view_users(user_details):
     if user_details:
-        for user_id in user_details:
-            print(f'\nUser ID: {user_id}, System User: {user_details}')
+        print()
+
+        for user_id, system_user in user_details.items():
+            print(
+                f"User ID: {user_id}, "
+                f"Username: {system_user['username']}, "
+                f"Password: {system_user['user_password']}")
 
         print()
     else:
