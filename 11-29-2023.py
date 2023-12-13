@@ -19,5 +19,4 @@ file = open('it-3-ya-2.txt', 'r+')
 # a - append
 # a+ - append and read
 
-
 print(file.readline())
