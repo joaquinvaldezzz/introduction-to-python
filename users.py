@@ -1,5 +1,5 @@
 """
-Author:         John Joaquin A. Valdez
+Author:         John Joaquin A. Valdez, Christal Sofia D. Malbago
 Date created:   December 6, 2023,
 Description:    A simple program that adds users to a set and reads its contents.
 """
